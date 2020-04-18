@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.13.1">
+  <meta name="generator" content="MarkBind 2.14.1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>RepoSense - Process</title>
   <link rel="stylesheet" href="markbind/css/bootstrap.min.css">
@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="markbind/css/octicons.css">
   <link rel="stylesheet" href="markbind/css/github.min.css">
   <link rel="stylesheet" href="markbind/css/markbind.css">
+  <link rel="stylesheet" href="/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="markbind/layouts/default/styles.css">
   <link rel="stylesheet" href="markbind/css/site-nav.css">
   <link rel="stylesheet" href="markbind/css/page-nav.css">
@@ -45,8 +46,8 @@
           <ul class="px-0 site-nav-list">
             <li class="mt-2"><span class="lead"><strong><a href="/index.html" class="site-nav__a">Home</a></strong></span></li>
             <li class="mt-2"><button class="dropdown-btn"><span class="lead"><strong>User Guide</strong></span>
- <i class="dropdown-btn-icon">
-<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></button>
+                <i class="dropdown-btn-icon">
+                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></button>
               <div class="dropdown-container">
                 <ul class="pl-3 site-nav-list">
                   <li class="mt-2"><a href="/UserGuide.html#getting-started" class="site-nav__a">Getting Started</a></li>
@@ -61,8 +62,8 @@
               </div>
             </li>
             <li class="mt-2"><button class="dropdown-btn"><span class="lead"><strong>Developer Guide</strong></span>
- <i class="dropdown-btn-icon">
-<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></button>
+                <i class="dropdown-btn-icon">
+                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></button>
               <div class="dropdown-container">
                 <ul class="pl-3 site-nav-list">
                   <li class="mt-2"><a href="/DeveloperGuide.html#setting-up" class="site-nav__a">Setting up</a></li>
@@ -73,8 +74,8 @@
               </div>
             </li>
             <li class="mt-2"><button class="dropdown-btn"><span class="lead"><strong>About</strong></span>
- <i class="dropdown-btn-icon">
-<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></button>
+                <i class="dropdown-btn-icon">
+                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></button>
               <div class="dropdown-container">
                 <ul class="pl-3 site-nav-list">
                   <li class="mt-2"><a href="/about.html#current-team" class="site-nav__a">Current Team</a></li>
@@ -85,19 +86,19 @@
           </ul>
         </div>
       </nav>
+
       <div id="content-wrapper">
-        <h1 id="process">Process<a class="fa fa-anchor" href="#process"></a></h1>
+        <h1 id="process">Process<a class="fa fa-anchor" href="#process" onclick="event.stopPropagation()"></a></h1>
         <p>We generally follow the <a href="https://oss-generic.github.io/process/">The OSS-Generic Reference Process</a> but with the following deviations.</p>
         <ul>
           <li>
-            <p>We will squash the commits when merging a PR. Therefore, there is no need to follow a strict commit organization or write elaborate commit messages for each commit. There is no need to use CanIHasReview tool either. However, when pushing new
-              commits to your PR branch, do tidy up <em>new</em> commits (i.e., commits not yet pushed) e.g., squash noise commits.</p>
+            <p>We will squash the commits when merging a PR. Therefore, there is no need to follow a strict commit organization or write elaborate commit messages for each commit. There is no need to use CanIHasReview tool either. However, when pushing new commits to your PR branch, do tidy up <em>new</em> commits (i.e., commits not yet pushed) e.g., squash noise commits.</p>
           </li>
           <li>
             <p>When syncing local branch with upstream, use <em>merge</em> rather than <em>rebase</em> to avoid the need to force push your branch.</p>
           </li>
         </ul>
-        <h2 id="how-to-contribute">How to contribute<a class="fa fa-anchor" href="#how-to-contribute"></a></h2>
+        <h2 id="how-to-contribute">How to contribute<a class="fa fa-anchor" href="#how-to-contribute" onclick="event.stopPropagation()"></a></h2>
         <p>Here's a quick guide on how you can contribute to our repository:</p>
         <ol>
           <li><a href="https://github.com/reposense/RepoSense/issues">Look for an open issue to work on</a>, or start a fresh issue to discuss a potential feature or bug.</li>
@@ -105,11 +106,14 @@
           <li>Start making your changes while following our Coding Standard for
             <a href="https://oss-generic.github.io/process/codingStandards/CodingStandard-Java.html">Java</a>,
             <a href="https://docs.google.com/document/d/1gZ6WG6HBTJYHAtVkz9kzi_SUuzfXqzO-SvFnLuag2xM/pub?embedded=true">JavaScript</a>,
-            <a href="https://oss-generic.github.io/process/codingStandards/CodingStandard-Css.html">CSS</a>, and <a href="https://oss-generic.github.io/process/codingStandards/CodingStandard-Html.html">HTML</a>.</li>
+            <a href="https://oss-generic.github.io/process/codingStandards/CodingStandard-Css.html">CSS</a>,
+            and <a href="https://oss-generic.github.io/process/codingStandards/CodingStandard-Html.html">HTML</a>.</li>
           <li>Open a pull request and propose a good commit message for your pull request by following our <a href="https://oss-generic.github.io/process/docs/FormatsAndConventions.html#commit-message">commit organization</a>.</li>
           <li>Let us know when you are ready for a review! If you haven't heard back from us after a couple of days, do probe us by leaving a comment on the pull request.</li>
         </ol>
       </div>
+
+
       <nav id="page-nav" class="navbar navbar-light bg-transparent">
         <div class="border-left-grey nav-inner position-sticky slim-scroll">
 
@@ -126,7 +130,7 @@
     <footer>
 
       <div class="text-center">
-        <small>[Generated by <a href="https://markbind.org/">MarkBind 2.13.1</a>]</small></div>
+        <small>[Generated by <a href="https://markbind.org/">MarkBind 2.14.1</a>]</small></div>
     </footer>
   </div>
 </body>

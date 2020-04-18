@@ -5,7 +5,7 @@
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="generator" content="MarkBind 2.13.1">
+  <meta name="generator" content="MarkBind 2.14.1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>RepoSense - Using Checkstyle-IDEA</title>
   <link rel="stylesheet" href="markbind/css/bootstrap.min.css">
@@ -15,6 +15,7 @@
   <link rel="stylesheet" href="markbind/css/octicons.css">
   <link rel="stylesheet" href="markbind/css/github.min.css">
   <link rel="stylesheet" href="markbind/css/markbind.css">
+  <link rel="stylesheet" href="/plugins/markbind-plugin-anchors/markbind-plugin-anchors.css">
   <link rel="stylesheet" href="markbind/layouts/default/styles.css">
   <link rel="stylesheet" href="markbind/css/site-nav.css">
   <link rel="stylesheet" href="markbind/css/page-nav.css">
@@ -45,8 +46,8 @@
           <ul class="px-0 site-nav-list">
             <li class="mt-2"><span class="lead"><strong><a href="/index.html" class="site-nav__a">Home</a></strong></span></li>
             <li class="mt-2"><button class="dropdown-btn"><span class="lead"><strong>User Guide</strong></span>
- <i class="dropdown-btn-icon">
-<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></button>
+                <i class="dropdown-btn-icon">
+                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></button>
               <div class="dropdown-container">
                 <ul class="pl-3 site-nav-list">
                   <li class="mt-2"><a href="/UserGuide.html#getting-started" class="site-nav__a">Getting Started</a></li>
@@ -61,8 +62,8 @@
               </div>
             </li>
             <li class="mt-2"><button class="dropdown-btn"><span class="lead"><strong>Developer Guide</strong></span>
- <i class="dropdown-btn-icon">
-<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></button>
+                <i class="dropdown-btn-icon">
+                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></button>
               <div class="dropdown-container">
                 <ul class="pl-3 site-nav-list">
                   <li class="mt-2"><a href="/DeveloperGuide.html#setting-up" class="site-nav__a">Setting up</a></li>
@@ -73,8 +74,8 @@
               </div>
             </li>
             <li class="mt-2"><button class="dropdown-btn"><span class="lead"><strong>About</strong></span>
- <i class="dropdown-btn-icon">
-<span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></button>
+                <i class="dropdown-btn-icon">
+                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></button>
               <div class="dropdown-container">
                 <ul class="pl-3 site-nav-list">
                   <li class="mt-2"><a href="/about.html#current-team" class="site-nav__a">Current Team</a></li>
@@ -85,12 +86,14 @@
           </ul>
         </div>
       </nav>
+
       <div id="content-wrapper">
-        <h1 id="using-checkstyle-idea">Using Checkstyle-IDEA<a class="fa fa-anchor" href="#using-checkstyle-idea"></a></h1>
-        <h2 id="configuring-checkstyle-idea">Configuring Checkstyle-IDEA<a class="fa fa-anchor" href="#configuring-checkstyle-idea"></a></h2>
+        <h1 id="using-checkstyle-idea">Using Checkstyle-IDEA<a class="fa fa-anchor" href="#using-checkstyle-idea" onclick="event.stopPropagation()"></a></h1>
+        <h2 id="configuring-checkstyle-idea">Configuring Checkstyle-IDEA<a class="fa fa-anchor" href="#configuring-checkstyle-idea" onclick="event.stopPropagation()"></a></h2>
         <ol>
-          <li>Install the Checkstyle-IDEA plugin by going to <code>File</code> &gt; <code>Settings</code> (Windows/Linux), or <code>IntelliJ IDEA</code> &gt; <code>Preferences...</code> (macOS). <br> Select <code>Plugins</code>, press <code>Browse Repository</code>,
-            and find the plugin. <br> Restart the IDE to complete the installation.</li>
+          <li>Install the Checkstyle-IDEA plugin by going to <code>File</code> &gt; <code>Settings</code> (Windows/Linux), or <code>IntelliJ IDEA</code> &gt; <code>Preferences...</code> (macOS). <br>
+            Select <code>Plugins</code>, press <code>Browse Repository</code>, and find the plugin. <br>
+            Restart the IDE to complete the installation.</li>
           <li>Click <code>File</code> &gt; <code>Settings...</code> &gt; <code>Other Settings</code> &gt; <code>Checkstyle</code></li>
           <li>Set <code>Scan Scope</code> to <code>Only Java sources (including tests)</code>, so that the plugin will run checkstyle for our test source codes as well.</li>
           <li>Ensure that the <code>Checkstyle version</code> is set to <code>8.1</code>. This is the same version that we are using inside Gradle, so that you won't get any errors due to version incompatibility. <br>
@@ -108,7 +111,7 @@
             <img src="/images/checkstyle-idea-configuration.png" width="700"></li>
           <li>Click <code>OK</code>.</li>
         </ol>
-        <h2 id="troubleshooting-checkstyle-idea">Troubleshooting Checkstyle-IDEA<a class="fa fa-anchor" href="#troubleshooting-checkstyle-idea"></a></h2>
+        <h2 id="troubleshooting-checkstyle-idea">Troubleshooting Checkstyle-IDEA<a class="fa fa-anchor" href="#troubleshooting-checkstyle-idea" onclick="event.stopPropagation()"></a></h2>
         <p><strong>Problem: When importing <code>checkstyle.xml</code>, Checkstyle-IDEA plugin complains that <code>The Checkstyle rules file could not be parsed. ... The file has been blacklisted for 60s.</code></strong></p>
         <ul>
           <li>Reason: <code>checkstyle.xml</code> is written for a particular version, but the plugin was not configured to the correct version.</li>
@@ -120,6 +123,8 @@
           <li>Solution: Restart the IDE.</li>
         </ul>
       </div>
+
+
       <nav id="page-nav" class="navbar navbar-light bg-transparent">
         <div class="border-left-grey nav-inner position-sticky slim-scroll">
 
@@ -137,7 +142,7 @@
     <footer>
 
       <div class="text-center">
-        <small>[Generated by <a href="https://markbind.org/">MarkBind 2.13.1</a>]</small></div>
+        <small>[Generated by <a href="https://markbind.org/">MarkBind 2.14.1</a>]</small></div>
     </footer>
   </div>
 </body>
