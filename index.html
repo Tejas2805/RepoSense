@@ -31,6 +31,7 @@
         <li><a href="/RepoSense/dg/index.html" class="nav-link">DEVELOPER GUIDE</a></li>
         <li><a href="/RepoSense/about.html" class="nav-link">ABOUT</a></li>
         <li><a href="/RepoSense/contact.html" class="nav-link">CONTACT</a></li>
+        <li tags="dev"><a href="https://reposense.org" class="nav-link" target="_blank"><span><span aria-hidden="true" class="fas fa-external-link-alt"></span> PRODUCTION SITE</span></a></li>
         <li><a href="https://github.com/RepoSense/reposense" target="_blank" class="nav-link"><span><span aria-hidden="true" class="fab fa-github"></span></span></a></li>
         <li slot="right">
           <form class="navbar-form">
@@ -55,6 +56,7 @@
     <div id="flex-body">
 
       <div id="content-wrapper">
+        <div></div>
 
         <span id="overview">
           <p><strong>RepoSense can generate interactive visualizations of programmer activities, even across multiple repositories.</strong> It's ideal for educators and managers to get insights on programming activities of their mentees. The visualizations can be <strong>easily shared</strong> with others (e.g., as an online dashboard) and updating of the visualizations periodically <strong>can be automated</strong>.</p>
@@ -94,10 +96,7 @@
         </span>
         <div class="jumbotron jumbotron-fluid pt-2">
           <div class="container">
-            <p>
-              <br>
-              <br></p>
-            <div class="container">
+            <div class="container pt-2">
               <div class="row"></div>
               <div class="row">
                 <div class="col-sm">
@@ -115,94 +114,92 @@
                   </small>
                 </div>
                 <div class="col-sm">
-                  <div>
-                    <navigation>
-                      <p><span class="lead"><strong><strong>USER GUIDE</strong></strong></span></p>
+                  <p><strong><strong>USER GUIDE</strong></strong></p>
+                  <ul>
+                    <li>
+                      <p><a href="/RepoSense/ug/index.html"><strong>Overview</strong></a></p>
+                    </li>
+                    <li>
+                      <p><a href="/RepoSense/ug/generatingReports.html"><strong>Generating reports</strong></a></p>
+                    </li>
+                    <li>
+                      <p><a href="/RepoSense/ug/usingReports.html"><strong>Using reports</strong></a></p>
+                    </li>
+                    <li>
+                      <p><a href="/RepoSense/ug/customizingReports.html"><strong>Customizing reports</strong></a></p>
+                    </li>
+                    <li>
+                      <p><a href="/RepoSense/ug/sharingReports.html"><strong>Sharing reports</strong></a></p>
+                    </li>
+                    <li>
+                      <p><strong>Appendices</strong></p>
                       <ul>
                         <li>
-                          <p><a href="/RepoSense/ug/index.html"><strong>Overview</strong></a></p>
+                          <p><a href="/RepoSense/ug/cli.html">CLI syntax reference</a></p>
                         </li>
                         <li>
-                          <p><a href="/RepoSense/ug/usingReports.html"><strong>Using reports</strong></a></p>
+                          <p><a href="/RepoSense/ug/configFiles.html">Config files format</a></p>
                         </li>
                         <li>
-                          <p><a href="/RepoSense/ug/generatingReports.html"><strong>Generating reports</strong></a></p>
+                          <p><a href="/RepoSense/ug/usingAuthorTags.html">Using <code>@@author</code> tags</a></p>
                         </li>
                         <li>
-                          <p><a href="/RepoSense/ug/customizingReports.html"><strong>Customizing reports</strong></a></p>
+                          <p><a href="/RepoSense/ug/withNetlify.html">RepoSense with Netlify</a></p>
                         </li>
                         <li>
-                          <p><a href="/RepoSense/ug/sharingReports.html"><strong>Sharing reports</strong></a></p>
+                          <p><a href="/RepoSense/ug/withGithubActions.html">RepoSense with GitHub Actions</a></p>
                         </li>
                         <li>
-                          <p><strong>Appendices</strong></p>
+                          <p><a href="/RepoSense/ug/withTravis.html">RepoSense with Travis</a></p>
                         </li>
                         <li>
-                          <p><a href="/RepoSense/ug/cli.html">  CLI syntax reference</a></p>
+                          <p><a href="/RepoSense/ug/runSh.html"><code>run.sh</code> format</a></p>
                         </li>
                         <li>
-                          <p><a href="/RepoSense/ug/configFiles.html">  Config files format</a></p>
+                          <p><a href="/RepoSense/ug/faq.html">FAQ</a></p>
                         </li>
                         <li>
-                          <p><a href="/RepoSense/ug/usingAuthorTags.html">  Using <code>@@author</code> tags</a></p>
-                        </li>
-                        <li>
-                          <p><a href="/RepoSense/ug/withNetlify.html">  RepoSense with Netlify</a></p>
-                        </li>
-                        <li>
-                          <p><a href="/RepoSense/ug/withGithubActions.html">  RepoSense with GitHub Actions</a></p>
-                        </li>
-                        <li>
-                          <p><a href="/RepoSense/ug/withTravis.html">  RepoSense with Travis</a></p>
-                        </li>
-                        <li>
-                          <p><a href="/RepoSense/ug/runSh.html">  <code>run.sh</code> format</a></p>
-                        </li>
-                        <li>
-                          <p><a href="/RepoSense/ug/faq.html">  FAQ</a></p>
-                        </li>
-                        <li>
-                          <p><a href="/RepoSense/ug/troubleshooting.html">  Troubleshooting</a></p>
+                          <p><a href="/RepoSense/ug/troubleshooting.html">Troubleshooting</a></p>
                         </li>
                       </ul>
-                    </navigation>
-                  </div>
+                    </li>
+                  </ul>
                 </div>
                 <div class="col-sm">
-                  <div>
-                    <navigation>
-                      <p><span class="lead"><strong><strong>DEVELOPER GUIDE</strong></strong></span></p>
+
+
+                  <p><strong><strong>DEVELOPER GUIDE</strong></strong></p>
+                  <ul>
+                    <li>
+                      <p><a href="/RepoSense/dg/index.html"><strong>Contributing</strong></a></p>
+                    </li>
+                    <li>
+                      <p><a href="/RepoSense/dg/settingUp.html"><strong>Setting up</strong></a></p>
+                    </li>
+                    <li>
+                      <p><a href="/RepoSense/dg/workflow.html"><strong>Workflow</strong></a></p>
+                    </li>
+                    <li>
+                      <p><strong>Design and implementation</strong></p>
                       <ul>
                         <li>
-                          <p><a href="/RepoSense/dg/index.html"><strong>Contributing</strong></a></p>
+                          <p><a href="/RepoSense/dg/architecture.html">Architecture</a></p>
                         </li>
                         <li>
-                          <p><a href="/RepoSense/dg/settingUp.html"><strong>Setting up</strong></a></p>
-                        </li>
-                        <li>
-                          <p><a href="/RepoSense/dg/workflow.html"><strong>Workflow</strong></a></p>
-                        </li>
-                        <li>
-                          <p><strong>Design and implementation</strong></p>
-                        </li>
-                        <li>
-                          <p><a href="/RepoSense/dg/architecture.html">  Architecture</a></p>
-                        </li>
-                        <li>
-                          <p><a href="/RepoSense/dg/report.html">  HTML report</a></p>
-                        </li>
-                        <li>
-                          <p><a href="/RepoSense/dg/projectManagement.html"><strong>Project management</strong></a></p>
-                        </li>
-                        <li>
-                          <p><strong>Appendices</strong></p>
-                        </li>
-                        <li>
-                          <p><a href="/RepoSense/dg/styleGuides.html">  Style guides</a></p>
+                          <p><a href="/RepoSense/dg/report.html">HTML report</a></p>
                         </li>
                       </ul>
-                    </navigation>
-                  </div>
+                    </li>
+                    <li>
+                      <p><a href="/RepoSense/dg/projectManagement.html"><strong>Project management</strong></a></p>
+                    </li>
+                    <li>
+                      <p><strong>Appendices</strong></p>
+                      <ul>
+                        <li><a href="/RepoSense/dg/styleGuides.html">Style guides</a></li>
+                      </ul>
+                    </li>
+                  </ul>
                 </div>
               </div>
             </div>
@@ -215,7 +212,7 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Mon, Jun 15, 2020, 6:27:49 AM UTC]</small></div>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Thu, Jul 9, 2020, 2:27:18 PM UTC]</small></div>
     </footer>
   </div>
 </body>

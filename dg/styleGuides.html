@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="generator" content="MarkBind 2.14.1">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>RepoSense - Appendix: Style Guides</title>
+  <title>RepoSense - Appendix: Style guides</title>
   <link rel="stylesheet" href="../markbind/css/bootstrap.min.css">
   <link rel="stylesheet" href="../markbind/css/bootstrap-vue.min.css">
   <link rel="stylesheet" href="../markbind/fontawesome/css/all.min.css">
@@ -32,6 +32,7 @@
         <li><a href="/RepoSense/dg/index.html" class="nav-link">DEVELOPER GUIDE</a></li>
         <li><a href="/RepoSense/about.html" class="nav-link">ABOUT</a></li>
         <li><a href="/RepoSense/contact.html" class="nav-link">CONTACT</a></li>
+        <li tags="dev"><a href="https://reposense.org" class="nav-link" target="_blank"><span><span aria-hidden="true" class="fas fa-external-link-alt"></span> PRODUCTION SITE</span></a></li>
         <li><a href="https://github.com/RepoSense/reposense" target="_blank" class="nav-link"><span><span aria-hidden="true" class="fab fa-github"></span></span></a></li>
         <li slot="right">
           <form class="navbar-form">
@@ -48,20 +49,33 @@
             <li class="mt-2"><a href="/RepoSense/dg/index.html" class="site-nav__a"><strong>Contributing</strong></a></li>
             <li class="mt-2"><a href="/RepoSense/dg/settingUp.html" class="site-nav__a"><strong>Setting up</strong></a></li>
             <li class="mt-2"><a href="/RepoSense/dg/workflow.html" class="site-nav__a"><strong>Workflow</strong></a></li>
-            <li class="mt-2"><strong>Design and implementation</strong></li>
-            <li class="mt-2"><a href="/RepoSense/dg/architecture.html" class="site-nav__a">  Architecture</a></li>
-            <li class="mt-2"><a href="/RepoSense/dg/report.html" class="site-nav__a">  HTML report</a></li>
+            <li class="mt-2"><button class="dropdown-btn dropdown-btn-open"><strong>Design and implementation</strong>
+                <i class="dropdown-btn-icon rotate-icon">
+                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></button>
+              <div class="dropdown-container dropdown-container-open">
+                <ul class="pl-3 site-nav-list">
+                  <li class="mt-2"><a href="/RepoSense/dg/architecture.html" class="site-nav__a">Architecture</a></li>
+                  <li class="mt-2"><a href="/RepoSense/dg/report.html" class="site-nav__a">HTML report</a></li>
+                </ul>
+              </div>
+            </li>
             <li class="mt-2"><a href="/RepoSense/dg/projectManagement.html" class="site-nav__a"><strong>Project management</strong></a></li>
-            <li class="mt-2"><strong>Appendices</strong></li>
-            <li class="mt-2"><a href="/RepoSense/dg/styleGuides.html" class="site-nav__a current">  Style guides</a></li>
+            <li class="mt-2"><button class="dropdown-btn dropdown-btn-open"><strong>Appendices</strong>
+                <i class="dropdown-btn-icon rotate-icon">
+                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></button>
+              <div class="dropdown-container dropdown-container-open">
+                <ul class="pl-3 site-nav-list">
+                  <li class="mt-2"><a href="/RepoSense/dg/styleGuides.html" class="site-nav__a current">Style guides</a></li>
+                </ul>
+              </div>
+            </li>
           </ul>
         </div>
       </nav>
 
       <div id="content-wrapper">
-        <div>
-        </div>
-        <h1 class="display-4" id="appendix-style-guides">Appendix: Style guides<a class="fa fa-anchor" href="#appendix-style-guides" onclick="event.stopPropagation()"></a></h1>
+        <div></div>
+        <h1 class="display-4" id="appendix-style-guides"><span>Appendix: Style guides</span><a class="fa fa-anchor" href="#appendix-style-guides" onclick="event.stopPropagation()"></a></h1>
         <div class="lead">
           <p>Our coding standards are mostly based on those at <a href="https://se-education.org/guides">se-education.org/guides</a>.</p>
         </div>
@@ -81,7 +95,7 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Mon, Jun 15, 2020, 6:27:49 AM UTC]</small></div>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Thu, Jul 9, 2020, 2:27:18 PM UTC]</small></div>
     </footer>
   </div>
 </body>

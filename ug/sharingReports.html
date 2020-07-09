@@ -26,13 +26,14 @@
   <div id="app">
     <header>
       <navbar type="dark" placement="top" class="temp-navbar">
-        <a slot="brand" href="/RepoSense/index.html" title="Home" class="navbar-brand"><img width="30px" src="/RepoSense/favicon.ico"></a>
-        <li><a href="/RepoSense/index.html" class="nav-link">HOME</a></li>
-        <li><a href="/RepoSense/showcase.html" class="nav-link">SHOWCASE</a></li>
-        <li><a href="/RepoSense/ug/index.html" class="nav-link">USER GUIDE</a></li>
-        <li><a href="/RepoSense/dg/index.html" class="nav-link">DEVELOPER GUIDE</a></li>
-        <li><a href="/RepoSense/about.html" class="nav-link">ABOUT</a></li>
-        <li><a href="/RepoSense/contact.html" class="nav-link">CONTACT</a></li>
+        <a slot="brand" href="/index.html" title="Home" class="navbar-brand"><img width="30px" src="/favicon.ico"></a>
+        <li><a href="/index.html" class="nav-link">HOME</a></li>
+        <li><a href="/showcase.html" class="nav-link">SHOWCASE</a></li>
+        <li><a href="/ug/index.html" class="nav-link">USER GUIDE</a></li>
+        <li><a href="/dg/index.html" class="nav-link">DEVELOPER GUIDE</a></li>
+        <li><a href="/about.html" class="nav-link">ABOUT</a></li>
+        <li><a href="/contact.html" class="nav-link">CONTACT</a></li>
+        <li tags="dev"><a href="https://reposense.org" class="nav-link" target="_blank"><span><span aria-hidden="true" class="fas fa-external-link-alt"></span> PRODUCTION SITE</span></a></li>
         <li><a href="https://github.com/RepoSense/reposense" target="_blank" class="nav-link"><span><span aria-hidden="true" class="fab fa-github"></span></span></a></li>
         <li slot="right">
           <form class="navbar-form">
@@ -41,32 +42,47 @@
         </li>
       </navbar>
     </header>
+    <header>
+      <div class="text-center bg-warning p-2">
+        <p>You are looking at the user documentation for the most recent <code>master</code> branch of RepoSense (not released to the public yet).
+          <strong>The documentation for the latest public release is <a href="https://reposense.org/ug">here</a>.</strong></p>
+      </div>
+    </header>
     <div id="flex-body">
       <nav id="site-nav" class="navbar navbar-light bg-transparent">
         <div class="border-right-grey nav-inner position-sticky slim-scroll">
           <p><span class="lead"><strong><strong>USER GUIDE</strong></strong></span></p>
           <ul class="px-0 site-nav-list">
             <li class="mt-2"><a href="/RepoSense/ug/index.html" class="site-nav__a"><strong>Overview</strong></a></li>
-            <li class="mt-2"><a href="/RepoSense/ug/usingReports.html" class="site-nav__a"><strong>Using reports</strong></a></li>
             <li class="mt-2"><a href="/RepoSense/ug/generatingReports.html" class="site-nav__a"><strong>Generating reports</strong></a></li>
+            <li class="mt-2"><a href="/RepoSense/ug/usingReports.html" class="site-nav__a"><strong>Using reports</strong></a></li>
             <li class="mt-2"><a href="/RepoSense/ug/customizingReports.html" class="site-nav__a"><strong>Customizing reports</strong></a></li>
             <li class="mt-2"><a href="/RepoSense/ug/sharingReports.html" class="site-nav__a current"><strong>Sharing reports</strong></a></li>
-            <li class="mt-2"><strong>Appendices</strong></li>
-            <li class="mt-2"><a href="/RepoSense/ug/cli.html" class="site-nav__a">  CLI syntax reference</a></li>
-            <li class="mt-2"><a href="/RepoSense/ug/configFiles.html" class="site-nav__a">  Config files format</a></li>
-            <li class="mt-2"><a href="/RepoSense/ug/usingAuthorTags.html" class="site-nav__a">  Using <code>@@author</code> tags</a></li>
-            <li class="mt-2"><a href="/RepoSense/ug/withNetlify.html" class="site-nav__a">  RepoSense with Netlify</a></li>
-            <li class="mt-2"><a href="/RepoSense/ug/withGithubActions.html" class="site-nav__a">  RepoSense with GitHub Actions</a></li>
-            <li class="mt-2"><a href="/RepoSense/ug/withTravis.html" class="site-nav__a">  RepoSense with Travis</a></li>
-            <li class="mt-2"><a href="/RepoSense/ug/runSh.html" class="site-nav__a">  <code>run.sh</code> format</a></li>
-            <li class="mt-2"><a href="/RepoSense/ug/faq.html" class="site-nav__a">  FAQ</a></li>
-            <li class="mt-2"><a href="/RepoSense/ug/troubleshooting.html" class="site-nav__a">  Troubleshooting</a></li>
+            <li class="mt-2"><button class="dropdown-btn dropdown-btn-open"><strong>Appendices</strong>
+                <i class="dropdown-btn-icon rotate-icon">
+                  <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></span></i></button>
+              <div class="dropdown-container dropdown-container-open">
+                <ul class="pl-3 site-nav-list">
+                  <li class="mt-2"><a href="/RepoSense/ug/cli.html" class="site-nav__a">CLI syntax reference</a></li>
+                  <li class="mt-2"><a href="/RepoSense/ug/configFiles.html" class="site-nav__a">Config files format</a></li>
+                  <li class="mt-2"><a href="/RepoSense/ug/usingAuthorTags.html" class="site-nav__a">Using <code>@@author</code> tags</a></li>
+                  <li class="mt-2"><a href="/RepoSense/ug/withNetlify.html" class="site-nav__a">RepoSense with Netlify</a></li>
+                  <li class="mt-2"><a href="/RepoSense/ug/withGithubActions.html" class="site-nav__a">RepoSense with GitHub Actions</a></li>
+                  <li class="mt-2"><a href="/RepoSense/ug/withTravis.html" class="site-nav__a">RepoSense with Travis</a></li>
+                  <li class="mt-2"><a href="/RepoSense/ug/runSh.html" class="site-nav__a"><code>run.sh</code> format</a></li>
+                  <li class="mt-2"><a href="/RepoSense/ug/faq.html" class="site-nav__a">FAQ</a></li>
+                  <li class="mt-2"><a href="/RepoSense/ug/troubleshooting.html" class="site-nav__a">Troubleshooting</a></li>
+                </ul>
+              </div>
+            </li>
           </ul>
         </div>
       </nav>
 
+
       <div id="content-wrapper">
-        <h1 class="display-4" id="sharing-reports">Sharing reports<a class="fa fa-anchor" href="#sharing-reports" onclick="event.stopPropagation()"></a></h1>
+        <div></div>
+        <h1 class="display-4" id="sharing-reports"><span>Sharing reports</span><a class="fa fa-anchor" href="#sharing-reports" onclick="event.stopPropagation()"></a></h1>
         <div class="lead">
           <p><strong>Often, you would want to share the RepoSense report with others.</strong> For example, a teacher using RepoSense for a programming class might want to share the report privately with tutors or publish it so that everyone can see it.</p>
         </div>
@@ -83,7 +99,8 @@
               <p><span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Appendix: <strong>Using RepoSense with GitHub Actions</strong></p>
             </template>
             <div>
-              <h1 class="display-4" id="appendix-using-reposense-with-github-actions">Appendix: Using RepoSense with GitHub Actions<a class="fa fa-anchor" href="#appendix-using-reposense-with-github-actions" onclick="event.stopPropagation()"></a></h1>
+              <div></div>
+              <h1 class="display-4" id="appendix-reposense-with-github-actions"><span>Appendix: RepoSense with GitHub Actions</span><a class="fa fa-anchor" href="#appendix-reposense-with-github-actions" onclick="event.stopPropagation()"></a></h1>
               <div id="section-setting-up">
                 <div class="lead">
                   <p>You can use <a href="https://github.com/features/actions"><em>GitHub Actions</em></a> (together with other GitHub tools) to automate the generating and publishing of RepoSense reports.</p>
@@ -106,8 +123,8 @@
                         <p>We recommend using a <a href="https://github.blog/2013-05-16-personal-api-tokens/">personal access token</a> if aiming for the ease of setup and <a href="https://developer.github.com/v3/guides/managing-deploy-keys/#deploy-keys">deploy key</a> if aiming for enhanced security.</p>
                         <h3 id="if-you-wish-to-use-personal-access-token">If you wish to use <em>personal access token</em>:<a class="fa fa-anchor" href="#if-you-wish-to-use-personal-access-token" onclick="event.stopPropagation()"></a></h3>
                         <ol>
-                          <li>Follow this <a href="https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/">guide</a> and give only <code>public_repo</code> permission.</li>
-                          <li><strong>Copy</strong> the token for later use.</li>
+                          <li><strong>Create a <em>personal access token</em></strong> by following this <a href="https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/">guide</a> and give only <code>public_repo</code> permission.</li>
+                          <li><strong>Copy the token</strong> for later use.</li>
                         </ol>
                         <h3 id="if-you-wish-to-use-deploy-key">If you wish to use <em>deploy key</em>:<a class="fa fa-anchor" href="#if-you-wish-to-use-deploy-key" onclick="event.stopPropagation()"></a></h3>
                         <box type="info"><template slot="icon"><span aria-hidden="true" class="fab fa-windows"></span></template>
@@ -115,20 +132,32 @@
                           </p>
                         </box>
                         <ol>
-                          <li>Use <code>ssh-keygen</code> to create a public/private key pair without a passphrase. <br>
-                            i.e. <code>ssh-keygen -t ecdsa -b 521 -f id_reposense -q -N &quot;&quot;</code></li>
-                          <li>Go to the <a href="https://github.com/reposense/publish-RepoSense/settings/keys">deploy key settings</a> of your publish-RepoSense fork and create a new deploy key with the contents of <code>id_reposense.pub</code>.</li>
-                          <li><strong>Copy</strong> the base64 encoded content of the private key for later use. <br>
-                            i.e. <code>cat id_reposense | base64 -w 0</code></li>
+                          <li><strong>Create a public-private key pair</strong> (without a passphrase) using the <code>ssh-keygen</code>. <br>
+                            i.e., <code>ssh-keygen -t ecdsa -b 521 -f id_reposense -q -N &quot;&quot;</code></li>
+                          <li><strong>Create a deploy key</strong> as follows:
+                            <ol>
+                              <li>Go to the <code>settings</code> page of your publish-RepoSense fork</li>
+                              <li>Click on the <code>Deploy keys</code> item in the navigation menu in that page</li>
+                              <li>Click on the <code>Add deploy key</code> button and create a new deploy key with the contents of <code>id_reposense.pub</code>.</li>
+                            </ol>
+                          </li>
+                          <li><strong>Copy the private key</strong> in base64 encoded format for later use. <br>
+                            i.e., <code>cat id_reposense | base64 -w 0</code></li>
                         </ol>
                       </div>
                     </panel>
                   </div>
                   <p></p>
                 </div>
-                <p><span class="badge badge-dark bigger-level0">Step 3</span> Go to the <a href="https://github.com/reposense/publish-RepoSense/settings/secrets">secrets settings</a> of your <em>publish-RepoSense</em> fork, add a new secret as <code>ACCESS_TOKEN</code> or <code>DEPLOY_KEY</code> depending on your earlier choice and paste the token/key; then click <code>Add secret</code>:<br>
-                  <a href="/RepoSense/images/publishingguide-secrets.png" target="_self"><img src="/RepoSense/images/publishingguide-secrets.png" alt class="img-fluid" title="GitHub Actions Secrets"></a></p>
-                <p><span class="badge badge-dark bigger-level0">Step 4</span></p>
+                <p><span class="badge badge-dark bigger-level0">Step 3</span> <strong>Add the token/key as a secret:</strong></p>
+                <ol>
+                  <li>Go to the <code>Settings</code> page of your fork of the <a href="https://github.com/reposense/publish-RepoSense">publish-RepoSense</a> repo.</li>
+                  <li>Click on the <code>Secrets</code> menu item on the left of that page.</li>
+                  <li>Click on <code>Add secret</code>.</li>
+                  <li>Add a new secret with the name <code>ACCESS_TOKEN</code> or <code>DEPLOY_KEY</code> (depending on your earlier choice) and the value of the token/key you copied earlier.<br>
+                    <a href="/RepoSense/images/publishingguide-secrets.png" target="_self"><img src="/RepoSense/images/publishingguide-secrets.png" alt class="img-fluid" title="GitHub Actions Secrets"></a></li>
+                </ol>
+                <p><span class="badge badge-dark bigger-level0">Step 4</span> <strong>Update report configuration:</strong></p>
                 <div>
                   <p>In your fork, edit <code>run.sh</code> (and if applicable, <code>repo-config.csv</code>, <code>author-config.csv</code>, <code>group-config.csv</code>) to customize the command line parameters or repositories to be analyzed.</p>
                   <div class="indented-level0">
@@ -136,6 +165,7 @@
                         <p><span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Appendix: <strong><code>run.sh</code> format</strong></p>
                       </template>
                       <div>
+                        <div></div>
                         <h1 class="display-4" id="appendix-run-sh-format"><span>Appendix: <code>run.sh</code> format</span><a class="fa fa-anchor" href="#appendix-run-sh-format" onclick="event.stopPropagation()"></a></h1>
                         <div class="lead">
                           <p><a href="https://github.com/reposense/publish-RepoSense/blob/master/run.sh"><code>run.sh</code></a> is a script used for automating RepoSense report generation.</p>
@@ -148,7 +178,8 @@
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Appendix: <strong>CLI syntax reference</strong></p>
                             </template>
                             <div>
-                              <h1 class="display-4" id="appendix-cli-syntax-reference">Appendix: CLI syntax reference<a class="fa fa-anchor" href="#appendix-cli-syntax-reference" onclick="event.stopPropagation()"></a></h1>
+                              <div></div>
+                              <h1 class="display-4" id="appendix-cli-syntax-reference"><span>Appendix: CLI syntax reference</span><a class="fa fa-anchor" href="#appendix-cli-syntax-reference" onclick="event.stopPropagation()"></a></h1>
                               <div class="lead">
                                 <p>The command <code>java -jar RepoSense.jar</code> takes several flags.</p>
                               </div>
@@ -313,7 +344,8 @@
                       </template>
                       <div>
                         <div></div>
-                        <h1 class="display-4" id="appendix-config-files-format">Appendix: Config files format<a class="fa fa-anchor" href="#appendix-config-files-format" onclick="event.stopPropagation()"></a></h1>
+                        <div></div>
+                        <h1 class="display-4" id="appendix-config-files-format"><span>Appendix: Config files format</span><a class="fa fa-anchor" href="#appendix-config-files-format" onclick="event.stopPropagation()"></a></h1>
                         <div class="lead">
                           <p>Given below are the details of the various config files used by RepoSense.</p>
                         </div>
@@ -321,38 +353,13 @@
                           <p><strong>RepoSense ignores the first row (i.e., column headings) of CSV config files.</strong> It is used simply to provide more information to human readers. This also means the <mark>columns in your config files should be in the exact order specified here</mark>.
                           </p>
                         </box>
+                        <box type="info" seamless>
+                          <p><strong>A value in a config file is optional to provide unless it specified as <span class="badge badge-danger">mandatory</span></strong>.
+                          </p>
+                        </box>
 
                         <h2 id="repo-config-csv"><code>repo-config.csv</code><a class="fa fa-anchor" href="#repo-config-csv" onclick="event.stopPropagation()"></a></h2>
-                        <p><strong><code>repo-config.csv</code> file contains repo-level config data.</strong> Each row represents a repository's configuration.</p>
-                        <p>Here is an example:</p>
-                        <div class="table-responsive">
-                          <table class="markbind-table table table-bordered table-striped">
-                            <thead>
-                              <tr>
-                                <th>Repository's Location</th>
-                                <th>Branch</th>
-                                <th>File formats</th>
-                                <th>Ignore Glob List</th>
-                                <th>Ignore standalone config</th>
-                                <th>Ignore Commits List</th>
-                                <th>Ignore Authors List</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td><code>https://github.com/foo/bar.git</code></td>
-                                <td><code>master</code></td>
-                                <td><code>override:java;css</code></td>
-                                <td><code>test/**</code></td>
-                                <td><code>yes</code></td>
-                                <td><code>2fb6b9b2dd9fa40bf0f9815da2cb0ae8731436c7;c5a6dc774e22099cd9ddeb0faff1e75f9cf4f151</code></td>
-                                <td><code>Alice</code></td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                        <p>When using standalone config (if it is not ignored), it is possible to override specific values from the standalone config by prepending the entered value with <code>override:</code>.</p>
-                        <br>
+                        <p><strong><code>repo-config.csv</code> file contains repo-level config data.</strong> Each row represents a repository's configuration (<a href="/RepoSense/ug/repo-config.csv">example</a>).</p>
                         <div class="table-responsive">
                           <table class="markbind-table table table-bordered table-striped">
                             <thead>
@@ -395,6 +402,10 @@
                         </div>
                         <p><sup>* <strong>Multi-value column</strong>: multiple values can be entered in this column using a semicolon <code>;</code> as the separator.</sup>
                           <sup>+ <strong>Overrideable column</strong>: prepend with <code>override:</code> to use entered value(s) instead of value(s) from standalone config.</sup></p>
+                        <box type="info" seamless>
+                          <p>When using <a href="#config-json-standalone-config-file">standalone config</a> (if it is not ignored), it is possible to override specific values from the standalone config by prepending the entered value with <code>override:</code>.
+                          </p>
+                        </box>
 
                         <h2 id="author-config-csv"><code>author-config.csv</code><a class="fa fa-anchor" href="#author-config-csv" onclick="event.stopPropagation()"></a></h2>
                         <p>Optionally, you can use a <code>author-config.csv</code> (which should be in the same directory as <code>repo-config.csv</code> file) to provide more details about the authors to analyze (<a href="/RepoSense/ug/author-config.csv">example</a>). It should contain the following columns:</p>
@@ -525,7 +536,8 @@
                   </div>
                   <p></p>
                 </div>
-                <p><span class="badge badge-dark bigger-level0">Step 5</span> To access your site, go to the settings of your fork in GitHub, under <strong>GitHub Pages</strong> section, look for <code>Your site is published at [LINK]</code>. It should look something like <code>https://[YOUR_GITHUB_ID].github.io/publish-RepoSense</code>.
+                <p><span class="badge badge-dark bigger-level0">Step 5</span> <strong>View the generated report:</strong></p>
+                <p>To access your regenerated RepoSense report, go to the settings of your fork in GitHub, under <strong>GitHub Pages</strong> section, look for <code>Your site is published at [LINK]</code>. It should look something like <code>https://[YOUR_GITHUB_ID].github.io/publish-RepoSense</code>.
                   <a href="/RepoSense/images/publishingguide-githubsetting.jpg" target="_self"><img src="/RepoSense/images/publishingguide-githubsetting.jpg" alt class="img-fluid" title="GitHub Setting"></a></p>
               </div>
 
@@ -552,7 +564,8 @@
               <p><span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Appendix: <strong>Using RepoSense with Travis</strong></p>
             </template>
             <div>
-              <h1 class="display-4" id="appendix-using-reposense-with-travis">Appendix: Using RepoSense with Travis<a class="fa fa-anchor" href="#appendix-using-reposense-with-travis" onclick="event.stopPropagation()"></a></h1>
+              <div></div>
+              <h1 class="display-4" id="appendix-reposense-with-travis"><span>Appendix: RepoSense with Travis</span><a class="fa fa-anchor" href="#appendix-reposense-with-travis" onclick="event.stopPropagation()"></a></h1>
               <div id="section-setting-up">
                 <div class="lead">
                   <p>You can use the CI tool Travis to automate generating and publishing of RepoSense reports.</p>
@@ -575,8 +588,8 @@
                         <p>We recommend using a <a href="https://github.blog/2013-05-16-personal-api-tokens/">personal access token</a> if aiming for the ease of setup and <a href="https://developer.github.com/v3/guides/managing-deploy-keys/#deploy-keys">deploy key</a> if aiming for enhanced security.</p>
                         <h3 id="if-you-wish-to-use-personal-access-token-2">If you wish to use <em>personal access token</em>:<a class="fa fa-anchor" href="#if-you-wish-to-use-personal-access-token-2" onclick="event.stopPropagation()"></a></h3>
                         <ol>
-                          <li>Follow this <a href="https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/">guide</a> and give only <code>public_repo</code> permission.</li>
-                          <li><strong>Copy</strong> the token for later use.</li>
+                          <li><strong>Create a <em>personal access token</em></strong> by following this <a href="https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/">guide</a> and give only <code>public_repo</code> permission.</li>
+                          <li><strong>Copy the token</strong> for later use.</li>
                         </ol>
                         <h3 id="if-you-wish-to-use-deploy-key-2">If you wish to use <em>deploy key</em>:<a class="fa fa-anchor" href="#if-you-wish-to-use-deploy-key-2" onclick="event.stopPropagation()"></a></h3>
                         <box type="info"><template slot="icon"><span aria-hidden="true" class="fab fa-windows"></span></template>
@@ -584,25 +597,44 @@
                           </p>
                         </box>
                         <ol>
-                          <li>Use <code>ssh-keygen</code> to create a public/private key pair without a passphrase. <br>
-                            i.e. <code>ssh-keygen -t ecdsa -b 521 -f id_reposense -q -N &quot;&quot;</code></li>
-                          <li>Go to the <a href="https://github.com/reposense/publish-RepoSense/settings/keys">deploy key settings</a> of your publish-RepoSense fork and create a new deploy key with the contents of <code>id_reposense.pub</code>.</li>
-                          <li><strong>Copy</strong> the base64 encoded content of the private key for later use. <br>
-                            i.e. <code>cat id_reposense | base64 -w 0</code></li>
+                          <li><strong>Create a public-private key pair</strong> (without a passphrase) using the <code>ssh-keygen</code>. <br>
+                            i.e., <code>ssh-keygen -t ecdsa -b 521 -f id_reposense -q -N &quot;&quot;</code></li>
+                          <li><strong>Create a deploy key</strong> as follows:
+                            <ol>
+                              <li>Go to the <code>settings</code> page of your publish-RepoSense fork</li>
+                              <li>Click on the <code>Deploy keys</code> item in the navigation menu in that page</li>
+                              <li>Click on the <code>Add deploy key</code> button and create a new deploy key with the contents of <code>id_reposense.pub</code>.</li>
+                            </ol>
+                          </li>
+                          <li><strong>Copy the private key</strong> in base64 encoded format for later use. <br>
+                            i.e., <code>cat id_reposense | base64 -w 0</code></li>
                         </ol>
                       </div>
                     </panel>
                   </div>
                   <p></p>
                 </div>
-                <p><span class="badge badge-dark bigger-level0">Step 3</span> Sign up and login to <a href="https://travis-ci.org/">Travis-CI</a>.</p>
-                <p><span class="badge badge-dark bigger-level0">Step 4</span> Go to <a href="https://travis-ci.org/account/repositories">your account</a>, click on <code>Sync account</code> to fetch all your repositories into Travis-CI.</p>
-                <p><span class="badge badge-dark bigger-level0">Step 5</span> Go to your <a href="https://travis-ci.org/search/publish-RepoSense/">publish-RepoSense fork in Travis-CI</a>, under <code>Current</code> tab click on <code>Activate repository</code>.</p>
-                <p><span class="badge badge-dark bigger-level0">Step 6</span> In the same page, click on <code>More options</code> on the right then access <code>Settings</code>:
-                  <a href="/RepoSense/images/publishingguide-travissetting.jpg" target="_self"><img src="/RepoSense/images/publishingguide-travissetting.jpg" alt class="img-fluid" title="Travis-CI Dashboard"></a></p>
-                <p><span class="badge badge-dark bigger-level0">Step 7</span> Under <code>Environment Variables</code>, name a variable as <code>GITHUB_TOKEN</code> or <code>GITHUB_DEPLOY_KEY</code> depending on your earlier choice and paste the token/key into its value field; then click <code>Add</code>. Ensure that the <code>Display value in build log</code> is <code>switched off</code> for security reasons:
-                  <a href="/RepoSense/images/publishingguide-githubtoken.jpg" target="_self"><img src="/RepoSense/images/publishingguide-githubtoken.jpg" alt class="img-fluid" title="Travis-CI Environment Variable"></a></p>
-                <p><span class="badge badge-dark bigger-level0">Step 8</span></p>
+                <p><span class="badge badge-dark bigger-level0">Step 3</span> <strong>Login to <a href="https://travis-ci.org/">Travis-CI</a>.</strong> You may have to sign up first.</p>
+                <p><span class="badge badge-dark bigger-level0">Step 4</span> <strong>Syncy your Travis account with GitHub:</strong></p>
+                <ol>
+                  <li>Go to <a href="https://travis-ci.org/account/repositories">your account</a>.</li>
+                  <li>Click on <code>Sync account</code> to fetch all your repositories into Travis-CI.</li>
+                </ol>
+                <p><span class="badge badge-dark bigger-level0">Step 5</span> <strong>Activate the repository:</strong></p>
+                <ol>
+                  <li>Go to your <a href="https://travis-ci.org/search/publish-RepoSense/">publish-RepoSense fork in Travis-CI</a></li>
+                  <li>Under <code>Current</code> tab, click on <code>Activate repository</code>.</li>
+                </ol>
+                <p><span class="badge badge-dark bigger-level0">Step 6</span> <strong>Set the token/key:</strong></p>
+                <ol>
+                  <li>In the same page, click on <code>More options</code> on the right.</li>
+                  <li>Then, click on the <code>Settings</code> option:<br>
+                    <a href="/RepoSense/images/publishingguide-travissetting.jpg" target="_self"><img src="/RepoSense/images/publishingguide-travissetting.jpg" alt class="img-fluid" title="Travis-CI Dashboard"></a></li>
+                  <li>Under <code>Environment Variables</code>, name a variable as <code>GITHUB_TOKEN</code> or <code>GITHUB_DEPLOY_KEY</code> depending on your earlier choice and paste the token/key into its value field; then click <code>Add</code>.</li>
+                  <li>Ensure that the <code>Display value in build log</code> is <code>switched off</code> for security reasons:<br>
+                    <a href="/RepoSense/images/publishingguide-githubtoken.jpg" target="_self"><img src="/RepoSense/images/publishingguide-githubtoken.jpg" alt class="img-fluid" title="Travis-CI Environment Variable"></a></li>
+                </ol>
+                <p><span class="badge badge-dark bigger-level0">Step 7</span> <strong>Update the report configuration:</strong></p>
                 <span id="section-edit-configs">
                   <p>In your fork, edit <code>run.sh</code> (and if applicable, <code>repo-config.csv</code>, <code>author-config.csv</code>, <code>group-config.csv</code>) to customize the command line parameters or repositories to be analyzed.</p>
                   <div class="indented-level0">
@@ -610,6 +642,7 @@
                         <p><span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Appendix: <strong><code>run.sh</code> format</strong></p>
                       </template>
                       <div>
+                        <div></div>
                         <h1 class="display-4" id="appendix-run-sh-format-2"><span>Appendix: <code>run.sh</code> format</span><a class="fa fa-anchor" href="#appendix-run-sh-format-2" onclick="event.stopPropagation()"></a></h1>
                         <div class="lead">
                           <p><a href="https://github.com/reposense/publish-RepoSense/blob/master/run.sh"><code>run.sh</code></a> is a script used for automating RepoSense report generation.</p>
@@ -622,7 +655,8 @@
                               <p><span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Appendix: <strong>CLI syntax reference</strong></p>
                             </template>
                             <div>
-                              <h1 class="display-4" id="appendix-cli-syntax-reference-2">Appendix: CLI syntax reference<a class="fa fa-anchor" href="#appendix-cli-syntax-reference-2" onclick="event.stopPropagation()"></a></h1>
+                              <div></div>
+                              <h1 class="display-4" id="appendix-cli-syntax-reference-2"><span>Appendix: CLI syntax reference</span><a class="fa fa-anchor" href="#appendix-cli-syntax-reference-2" onclick="event.stopPropagation()"></a></h1>
                               <div class="lead">
                                 <p>The command <code>java -jar RepoSense.jar</code> takes several flags.</p>
                               </div>
@@ -787,7 +821,8 @@
                       </template>
                       <div>
                         <div></div>
-                        <h1 class="display-4" id="appendix-config-files-format-2">Appendix: Config files format<a class="fa fa-anchor" href="#appendix-config-files-format-2" onclick="event.stopPropagation()"></a></h1>
+                        <div></div>
+                        <h1 class="display-4" id="appendix-config-files-format-2"><span>Appendix: Config files format</span><a class="fa fa-anchor" href="#appendix-config-files-format-2" onclick="event.stopPropagation()"></a></h1>
                         <div class="lead">
                           <p>Given below are the details of the various config files used by RepoSense.</p>
                         </div>
@@ -795,38 +830,13 @@
                           <p><strong>RepoSense ignores the first row (i.e., column headings) of CSV config files.</strong> It is used simply to provide more information to human readers. This also means the <mark>columns in your config files should be in the exact order specified here</mark>.
                           </p>
                         </box>
+                        <box type="info" seamless>
+                          <p><strong>A value in a config file is optional to provide unless it specified as <span class="badge badge-danger">mandatory</span></strong>.
+                          </p>
+                        </box>
 
                         <h2 id="repo-config-csv-2"><code>repo-config.csv</code><a class="fa fa-anchor" href="#repo-config-csv-2" onclick="event.stopPropagation()"></a></h2>
-                        <p><strong><code>repo-config.csv</code> file contains repo-level config data.</strong> Each row represents a repository's configuration.</p>
-                        <p>Here is an example:</p>
-                        <div class="table-responsive">
-                          <table class="markbind-table table table-bordered table-striped">
-                            <thead>
-                              <tr>
-                                <th>Repository's Location</th>
-                                <th>Branch</th>
-                                <th>File formats</th>
-                                <th>Ignore Glob List</th>
-                                <th>Ignore standalone config</th>
-                                <th>Ignore Commits List</th>
-                                <th>Ignore Authors List</th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <td><code>https://github.com/foo/bar.git</code></td>
-                                <td><code>master</code></td>
-                                <td><code>override:java;css</code></td>
-                                <td><code>test/**</code></td>
-                                <td><code>yes</code></td>
-                                <td><code>2fb6b9b2dd9fa40bf0f9815da2cb0ae8731436c7;c5a6dc774e22099cd9ddeb0faff1e75f9cf4f151</code></td>
-                                <td><code>Alice</code></td>
-                              </tr>
-                            </tbody>
-                          </table>
-                        </div>
-                        <p>When using standalone config (if it is not ignored), it is possible to override specific values from the standalone config by prepending the entered value with <code>override:</code>.</p>
-                        <br>
+                        <p><strong><code>repo-config.csv</code> file contains repo-level config data.</strong> Each row represents a repository's configuration (<a href="/RepoSense/ug/repo-config.csv">example</a>).</p>
                         <div class="table-responsive">
                           <table class="markbind-table table table-bordered table-striped">
                             <thead>
@@ -869,6 +879,10 @@
                         </div>
                         <p><sup>* <strong>Multi-value column</strong>: multiple values can be entered in this column using a semicolon <code>;</code> as the separator.</sup>
                           <sup>+ <strong>Overrideable column</strong>: prepend with <code>override:</code> to use entered value(s) instead of value(s) from standalone config.</sup></p>
+                        <box type="info" seamless>
+                          <p>When using <a href="#config-json-standalone-config-file">standalone config</a> (if it is not ignored), it is possible to override specific values from the standalone config by prepending the entered value with <code>override:</code>.
+                          </p>
+                        </box>
 
                         <h2 id="author-config-csv-2"><code>author-config.csv</code><a class="fa fa-anchor" href="#author-config-csv-2" onclick="event.stopPropagation()"></a></h2>
                         <p>Optionally, you can use a <code>author-config.csv</code> (which should be in the same directory as <code>repo-config.csv</code> file) to provide more details about the authors to analyze (<a href="/RepoSense/ug/author-config.csv">example</a>). It should contain the following columns:</p>
@@ -999,8 +1013,12 @@
                   </div>
                   <p></p>
                 </span>
-                <p><span class="badge badge-dark bigger-level0">Step 9</span> To access your site, go to the settings of your fork in GitHub, under <strong>GitHub Pages</strong> section, look for <code>Your site is published at [LINK]</code>. It should look something like <code>https://[YOUR_GITHUB_ID].github.io/publish-RepoSense</code>.
-                  <a href="/RepoSense/images/publishingguide-githubsetting.jpg" target="_self"><img src="/RepoSense/images/publishingguide-githubsetting.jpg" alt class="img-fluid" title="GitHub Setting"></a></p>
+                <p><span class="badge badge-dark bigger-level0">Step 8</span> <strong>View the generated report:</strong></p>
+                <ol>
+                  <li>Go to the <code>Settings</code> page of your fork in GitHub.</li>
+                  <li>Under the <code>GitHub Pages</code> section, look for <code>Your site is published at [LINK]</code>. It should look something like <code>https://[YOUR_GITHUB_ID].github.io/publish-RepoSense</code>.
+                    <a href="/RepoSense/images/publishingguide-githubsetting.jpg" target="_self"><img src="/RepoSense/images/publishingguide-githubsetting.jpg" alt class="img-fluid" title="GitHub Setting"></a></li>
+                </ol>
                 <box type="info" seamless>
                   <p>It takes a few minutes for report generation. Meanwhile, you can monitor the progress live at <a href="https://travis-ci.org/dashboard/builds">Travis-CI's Builds</a>.
                   </p>
@@ -1029,7 +1047,8 @@
               <p><span><span aria-hidden="true" class="glyphicon glyphicon-log-in"></span></span> Appendix: <strong>Using RepoSense with Netlify</strong></p>
             </template>
             <div>
-              <h1 class="display-4" id="appendix-using-reposense-with-netlify">Appendix: Using RepoSense with Netlify<a class="fa fa-anchor" href="#appendix-using-reposense-with-netlify" onclick="event.stopPropagation()"></a></h1>
+              <div></div>
+              <h1 class="display-4" id="appendix-reposense-with-netlify"><span>Appendix: RepoSense with Netlify</span><a class="fa fa-anchor" href="#appendix-reposense-with-netlify" onclick="event.stopPropagation()"></a></h1>
               <div id="section-setting-up">
                 <box type="warning" seamless>
                   <p>Note that Netlify has a low limit for free tier users (only 300 <em>build minutes</em> per month as at June 2020 -- a single report generation can take 2-3 build minutes, longer if your report includes many/big repositories).
@@ -1037,30 +1056,22 @@
                 </box>
 
                 <h2 id="setting-up-3">Setting up<a class="fa fa-anchor" href="#setting-up-3" onclick="event.stopPropagation()"></a></h2>
+                <p><span class="badge badge-dark bigger-level0">Step 1</span> <strong>Fork the <em>publish-RepoSense</em> repository</strong> using this <a href="https://github.com/RepoSense/publish-RepoSense/fork">link</a>. Optionally, you can rename the fork to match your RepoSense report e.g., <code>project-code-dashboard</code>.</p>
+                <p><span class="badge badge-dark bigger-level0">Step 2</span> <strong>Set up Netlify for your fork</strong> as described in this <a href="https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/">guide</a>.<br>
+                  <mark>You will need to use the following in <code>Step 5: Configure Your Settings</code> of that guide</mark>:</p>
+                <ul>
+                  <li>build command: <code>pip install requests &amp;&amp; ./run.sh</code><br></li>
+                  <li>publish directory: <code>./reposense-report</code></li>
+                </ul>
+                <p>After Netlify finishes building the site, you should be able to see a dummy report at the URL of your Netlify site.</p>
+                <p><span class="badge badge-dark bigger-level0">Step 3</span> <strong>Generate the report you want</strong> by updating the settings in your fork.</p>
                 <ol>
-                  <li>
-                    <p><strong>Fork the <em>publish-RepoSense</em> repository</strong> using this <a href="https://github.com/RepoSense/publish-RepoSense/fork">link</a>. Optionally, you can rename the fork to match your RepoSense report e.g., <code>project-code-dashboard</code>.</p>
-                  </li>
-                  <li>
-                    <p><strong>Set up Netlify for your fork</strong> as described in this <a href="https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/">guide</a>.<br>
-                      <mark>You will need to use the following in step 5</mark>:</p>
-                    <ul>
-                      <li>build command: <code>pip install requests &amp;&amp; ./run.sh</code><br></li>
-                      <li>publish directory: <code>./reposense-report</code></li>
-                    </ul>
-                    <p>After Netlify finishes building the site, you should be able to see a dummy report at the URL of your Netlify site.</p>
-                  </li>
-                  <li>
-                    <p><strong>Generate the report you want</strong> by updating the settings in your fork.</p>
-                    <ol>
-                      <li>Go to the <code>run.sh</code> file of your fork (on GitHub).</li>
-                      <li>Update the last line (i.e., the command for running RepoSense) to match the report you want to generate:<br>
-                        <code>java -jar RepoSense.jar --repos FULL_REPO_URL</code> (assuming you want to generate a default report for just one repo)<br>
-                        e.g., <code>java -jar RepoSense.jar --repos https://github.com/reposense/RepoSense.git</code> (<mark>note the .git at the end of the repo URL</mark>)</li>
-                      <li>Commit the file. This will trigger Netlify to rebuild the report.</li>
-                      <li>Go to the URL of your Netlify site to see the updated RepoSense report (it might take about 2-5 minutes for Netlify to generate the report).</li>
-                    </ol>
-                  </li>
+                  <li>Go to the <code>run.sh</code> file of your fork (on GitHub).</li>
+                  <li>Update the last line (i.e., the command for running RepoSense) to match the report you want to generate:<br>
+                    <code>java -jar RepoSense.jar --repos FULL_REPO_URL</code> (assuming you want to generate a default report for just one repo)<br>
+                    e.g., <code>java -jar RepoSense.jar --repos https://github.com/reposense/RepoSense.git</code> (<mark>note the .git at the end of the repo URL</mark>)</li>
+                  <li>Commit the file. This will trigger Netlify to rebuild the report.</li>
+                  <li>Go to the URL of your Netlify site to see the updated RepoSense report (it might take about 2-5 minutes for Netlify to generate the report).</li>
                 </ol>
               </div>
 
@@ -1133,7 +1144,7 @@
     <footer>
 
       <div class="text-center">
-        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Mon, Jun 15, 2020, 6:27:49 AM UTC]</small></div>
+        <small>[<span><strong>Powered by</strong></span> <img src="https://markbind.org/favicon.ico" width="30"> <a href="https://markbind.org/">MarkBind 2.14.1</a>, generated on Thu, Jul 9, 2020, 2:27:18 PM UTC]</small></div>
     </footer>
   </div>
 </body>
